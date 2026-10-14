@@ -1,0 +1,20 @@
+{
+  "services": {
+    "app": {
+      "root": ".",
+      "framework": "fastapi"
+    },
+    "finsight-web": {
+      "root": "frontend/finsight-web",
+      "framework": "vite"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": {
+        "service": "app"
+      }
+    }
+  ]
+}
